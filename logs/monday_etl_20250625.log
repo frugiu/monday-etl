@@ -1,0 +1,28 @@
+2025-06-25 08:38:40,091 - INFO - 🚀 INIZIO ETL COMPLETO GIORNALIERO - 2025-06-25
+2025-06-25 08:38:40,941 - INFO - ✅ Creata tabella storica projects_historical
+2025-06-25 08:38:41,466 - INFO - ✅ Creata tabella storica subitems_historical
+2025-06-25 08:38:42,270 - INFO - ✅ Creata tabella storica personnel_costs_historical
+2025-06-25 08:38:42,862 - INFO - ✅ Creata tabella storica travel_costs_historical
+2025-06-25 08:38:43,325 - INFO - ✅ Creata tabella storica supplier_costs_historical
+2025-06-25 08:38:43,327 - INFO - 📥 ESTRAZIONE DATI DA MONDAY.COM...
+2025-06-25 08:38:43,327 - INFO - 🚀 Inizio estrazione progetti e subitem...
+2025-06-25 08:38:44,628 - WARNING - ⚠️ API call failed, retrying (1/3): 400 Client Error: Bad Request for url: https://api.monday.com/v2
+2025-06-25 08:38:44,844 - WARNING - ⚠️ API call failed, retrying (2/3): 400 Client Error: Bad Request for url: https://api.monday.com/v2
+2025-06-25 08:38:45,039 - ERROR - 💥 ETL COMPLETO FALLITO: 400 Client Error: Bad Request for url: https://api.monday.com/v2
+2025-06-25 08:38:45,043 - ERROR - Traceback (most recent call last):
+  File "/Users/francescofrugiuele/monday-etl/monday_etl_automated.py", line 706, in run_daily_etl
+    projects_data, subitems_data = self.extract_projects_and_subitems()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francescofrugiuele/monday-etl/monday_etl_automated.py", line 234, in extract_projects_and_subitems
+    data = self.monday_api_call(query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/francescofrugiuele/monday-etl/monday_etl_automated.py", line 193, in monday_api_call
+    raise e
+  File "/Users/francescofrugiuele/monday-etl/monday_etl_automated.py", line 184, in monday_api_call
+    response.raise_for_status()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.monday.com/v2
+
+2025-06-25 08:38:45,043 - INFO - 📧 Notifica preparata (configurare SMTP per invio)
+2025-06-25 08:38:45,043 - INFO - Soggetto: ETL Monday.com → BigQuery - 2025-06-25

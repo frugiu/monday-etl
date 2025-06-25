@@ -1,0 +1,28 @@
+🚀 Avvio ETL Monday.com → BigQuery
+Timestamp: Wed Jun 25 09:09:51 CEST 2025
+2025-06-25 09:09:52,804 - INFO - 🚀 ETL MONDAY.COM → BIGQUERY - FIX FINALE
+2025-06-25 09:09:52,804 - INFO - ============================================================
+2025-06-25 09:09:52,804 - INFO - 🚀 ESTRAZIONE COMPLETA CON FIX DATE
+2025-06-25 09:10:13,255 - INFO - ✅ Estratti 92 progetti
+2025-06-25 09:10:13,255 - INFO - ⚙️ ELABORAZIONE DATI CON FIX DATE...
+2025-06-25 09:10:13,267 - INFO - 📊 ELABORATI:
+2025-06-25 09:10:13,267 - INFO -    Progetti: 92
+2025-06-25 09:10:13,267 - INFO -    Subitem: 805
+2025-06-25 09:10:13,267 - INFO -    Subitem con ricavi: 531
+2025-06-25 09:10:13,267 - INFO -    Ricavi totali: €2,697,768.06
+2025-06-25 09:10:13,267 - INFO - 📤 CARICAMENTO IN BIGQUERY CON SCHEMA...
+2025-06-25 09:10:23,389 - INFO - ✅ Progetti caricati: 92
+2025-06-25 09:10:30,227 - INFO - ✅ Subitem caricati: 805
+2025-06-25 09:10:30,227 - INFO - 🎉 ETL COMPLETATO CON SUCCESSO!
+2025-06-25 09:10:30,227 - INFO - 🔍 Verifica finale...
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/cloud/bigquery/table.py:1957: UserWarning: BigQuery Storage module not found, fetch data with the REST endpoint instead.
+  warnings.warn(
+2025-06-25 09:10:34,526 - INFO - 🎉 RISULTATI FINALI:
+2025-06-25 09:10:34,527 - INFO -    📊 Progetti: 92
+2025-06-25 09:10:34,527 - INFO -    📊 Subitem totali: 805.0
+2025-06-25 09:10:34,527 - INFO -    💰 Subitem con ricavi: 531.0
+2025-06-25 09:10:34,528 - INFO -    💰 Ricavi totali: €2,697,768.06
+2025-06-25 09:10:34,528 - INFO -    📚 Tabelle storiche:
+2025-06-25 09:10:34,530 - INFO -       subitems_historical: 1610 record
+2025-06-25 09:10:34,531 - INFO -       projects_historical: 184 record
+✅ ETL completato con successo
